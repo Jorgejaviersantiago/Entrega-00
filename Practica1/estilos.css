@@ -1,0 +1,59 @@
+/*Modelo de caja universal*/
+*{
+    box-sizing:border-box;
+
+}
+/* Altura completa del documento*/
+html, body{
+height:100%;
+
+
+
+
+
+}
+/*configuracion general*/
+/*Quitamos los margenes por defecto*/
+/*Elegimos una tipografia base*/
+/*defenimos color de texto y fondo*/
+body{
+
+    margin: 0;
+    font-family: Arial ,helvetica, sans-serif;
+    color:#333;
+    background: #f0f0f0;
+}
+/*Cabezara crntrada y con espacio de relleno (padding)*/
+.cabezara{
+
+    text-align: center;
+    padding:1rem  ; /*1 rem=16px*/
+}
+/*titulo de la cabecera*/
+.titulo{
+    margin:o;
+    color: #2c3E50;
+}
+/*Zona principal (main)
+  padding-> espacio intrior o relleno*/
+  #contenido-principal{
+    padding: 1rem;
+  
+}
+/*Clase trajeta:Usada para agrupar secciones visualmente
+- color blanco
+- borde sutily redondeado de las esqinas
+-sombra ligera
+-ancho maximo controlado
+*/
+.tarjeta{
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    width:min(900px,95%);
+    margin:1.5rem auto;
+    padding:1.5rem;
+    border:1px solid #f0f0f0;
+    box-shadow:0 2px 5px rgba(0,0,0,0.3);
+
+
+}
