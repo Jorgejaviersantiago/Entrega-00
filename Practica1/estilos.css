@@ -22,9 +22,13 @@ body{
     font-family: Arial ,helvetica, sans-serif;
     color:#333;
     background: #f0f0f0;
+    display: flex;          /*Contenedor flexible */
+    flex-direction: column;/*Disposición */
+    min-height: 100vh;      /*Altura total del  */
+   
 }
 /*Cabezara crntrada y con espacio de relleno (padding)*/
-.cabezara{
+.cabecera{
 
     text-align: center;
     padding:1rem  ; /*1 rem=16px*/
@@ -38,7 +42,7 @@ body{
   padding-> espacio intrior o relleno*/
   #contenido-principal{
     padding: 1rem;
-  
+    flex-grow: 1;
 }
 /*Clase trajeta:Usada para agrupar secciones visualmente
 - color blanco
@@ -54,6 +58,57 @@ body{
     padding:1.5rem;
     border:1px solid #f0f0f0;
     box-shadow:0 2px 5px rgba(0,0,0,0.3);
-
+}
+/*Texto secundario*/
+.aviso{
+    color: #7f8c8d;
+}
+/*Listas de dos columnas flexibles*/
+.listas{
+    display: flex;/*convierto al elemento como contenedor*/   
+    flex-direction: row;
+    gap: 2rem ;
+}
+/* Ajustes visuales de las listas*/
+.lista{                 /*Espacio para las viñetas*/
+    padding-left:20px;
+}
+.lista li{
+    margin:0.5rem 0;
+}
+/*Estílamos las tablas*/
+.tabla{
+    width:100%;
+    border-collapse:collapse;
+    margin-top: 1rem;
+}
+/*Border y relleno a las celdas*/
+.tabla th, .tabla td{
+    border:1px solid #ddd;
+    padding:10px;
+}
+.tabla th{
+    background-color:#2C3E50 ;
+    color:#ddd;
+    text-align: center;
 
 }
+.tabla td{
+    text-align: center;
+    white-space: nowrap;
+}
+/*Estilo de pie de página:
+    - color gris suave
+    -tamaño de letra menor
+    -Fondo ligeramente gris */
+.pie{
+    text-align: center;
+    padding: 1rem;
+    color:#7f8c8d;
+    background:#38707e ;
+    font-size: 14px;
+}
+
+
+
+
