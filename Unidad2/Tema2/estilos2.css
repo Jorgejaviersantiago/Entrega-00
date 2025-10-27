@@ -1,0 +1,19 @@
+html, body{
+    height:100%;
+    
+    
+    
+    
+    
+ }
+ body{
+
+        margin: 0;
+        font-family: Arial ,helvetica, sans-serif;
+        color:#333;
+        background: #f0f0f0;
+ }
+  .cabecera{
+        text-align: center;
+    padding: 1rem ;
+ }
