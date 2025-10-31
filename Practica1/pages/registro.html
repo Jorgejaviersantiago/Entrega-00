@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+     
+    <title>Registro</title>
+</head>
+<body>
+    <main>
+        <section class="tarjeta"> 
+          <h2>Registro de usuario</h2>
+            <form name= "buscar" action="buscar.html" method="get"> 
+                <label for="search">Buscar juego:</label> 
+                
+            
+                <input type="search" name="busqueda" id="search"
+                placeholder="Escribe título...">
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+        <section class="tarjeta">
+            <h2>Registro de usuario</h2>
+            <form action="registro.php" method="post">
+                <!--Campo de texto-->
+                <label for="nombre">Nombre de usuario</label>
+                <input type="text" name="nombre" id="name" required>
+            
+                <!--Campo de tipo email-->
+                <label for="email">Email:</label>
+                <input type="email" name="correo" id="email" placeholder="correo@example.com " required>
+                
+                <!--Campo de tipo password-->
+                <label for="pass">Contraseña:</label>
+                <input type="password" name="clave" id="pass" minlength="6" maxlength="12" required>
+                
+                <!--Campo de tipo patrón-->
+                <label for="id">DNI/NIE</label>
+                <input tipe="text" name="documento-id" id="id" pattern="([X-Zx-z[0-9]{7}|[0-9]{8})[A-Za-z] "required>
+
+                <!--Campo de típo numerio-->
+                <label for="age">Edad:</label>
+                <input type="number" name="edad" id="age" min="0">
+                
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
+
+
+
+
+
+
+    </main>
+</body>
+</html>
