@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos.css">
+
+    <title>Contacto</title>
+</head>
+<body>
+    <header class="cabecera">
+        <div class="brand">
+              <img src="imagenes/gamezone-logo.png" alt="Logo de game zone" class="logo">        
+        </div>
+          <h1 class="titulo">GameZone</h1>
+          <nav class="navegacio">
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Guias</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="Contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+              
+       </header>
+    <main id="contenido-principal">
+        <section class="tarjeta"> 
+          <h2>Contacto</h2>
+            <form action="contacto.php" method="post"> 
+               
+                <!--Lista desplegable-->
+                <label form="genero">Genero de juego favorito:</label>
+               <select name="categoria" id="genero">
+                <option disabled selected>Selecciona una opción</option>
+                <option value="Rol">Rol</option>
+                <option value="Aventura">Aventura</option>
+                <option value="deportes">Deportes</option>
+
+               </select>
+            
+            <p>Elige tu Plataforma</p>
+            <input type="radio" name="plataforma" id="pc" value="pc">
+            <label for="pc">pc</label>
+
+            <input type="radio" name="plataforma" id="nintendo" value="nintendo">
+            <label for="nintendo">nintendo</label>
+
+
+
+            <input type="radio" name="plataforma" id="ps5" value="ps5">
+            <label for="ps5">ps5</label>
+            
+
+            <!--Campo de estilo checkbox-->
+               <p>Plataforma</p>
+               <input type="checkbox" name="dificultad" id="dificultad" value="Facil">
+               <labe for="dificultad">Facil</labe >
+               
+               
+                <input type="checkbox" name="dificultad" id="dificultad" value="Media">
+                <labe for="dificultad">Media</labe >
+               
+                <input type="checkbox" name="dificultad" id="dificultad" value="DIficil">
+                <labe for="dificultad">Dificil</labe >
+                
+                
+                <!--Checkbox sin value-->
+                <input type="checkbox" name="suscripcion" id="suscripcion" >
+                <labe for="suscripcion">suscribete a Noticia:</labe >
+                
+
+
+                
+                <input type="submit" value="Enviar">
+                <input type="reset" value="limpiar">
+            </form>
+        </section>
+        
+
+
+    </main>
+</body>
+</html>
