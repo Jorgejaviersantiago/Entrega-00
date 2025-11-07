@@ -9,7 +9,7 @@
 <body>
     <header class="cabecera">
         <div class="brand">
-              <img src="imagenes/gamezone-logo.png" alt="Logo de game zone" class="logo">  
+              <img src="../imagenes/gamezone-logo.png" alt="Logo de game zone" class="logo">  
        </div>
           <h1 class="titulo">GameZone</h1>
           <nav class="navegacio">
@@ -25,46 +25,56 @@
           </nav>
        </header>
     <main class="contenido-principal">
-        <section class="tarjeta"> 
-          <h2>Registro de usuario</h2>
-            <form name= "buscar" action="buscar.html" method="get"> 
-                <label for="search">Buscar juego:</label> 
-                
-            
-                <input type="search" name="busqueda" id="search"
-                placeholder="Escribe título...">
-                <button type="submit">Buscar</button>
-            </form>
-        </section>
         <section class="tarjeta">
             <h2>Registro de usuario</h2>
-            <form action="registro.php" method="post">
+            <form action="registro.php" method="post" class="form-registro">
                <!--fielset agrupar campos-->
                 <fieldset>
                   <!--legend añade una leyenda a fielset-->
                     <legend>Datos de usuario</legend>
-                <!--Campo de texto-->
-                    <label for="nombre">Nombre de usuario</label>
-                    <input type="text" name="nombre" id="name" required>
-                
+               
+                    <!--Campo de texto-->
+                   <div class="form-row"> 
+                     <label for="nombre">Nombre de usuario</label>
+                     <input type="text" name="nombre" id="name" required >
+                  </div>
+                    
                     <!--Campo de tipo email-->
-                    <label for="email">Email:</label>
-                    <input type="email" name="correo" id="email" placeholder="correo@example.com " required>
-            </fieldset>
-            <fieldset>
+                    <div class="form-row">
+                         <label for="email">Email:</label>
+                        <input type="email" name="correo" id="email" placeholder="correo@example.com " required>
+                    </div>
+                    
             <!--Campo de tipo password-->
+               <div class="form-row"> 
                 <label for="pass">Contraseña:</label>
                 <input type="password" name="clave" id="pass" minlength="6" maxlength="12" required>
-           
+               </div>
+          
                 <!--Campo de tipo patrón-->
-                <label for="id">DNI/NIE</label>
-                <input tipe="text" name="documento-id" id="id" pattern="([X-Zx-z[0-9]{7}|[0-9]{8})[A-Za-z] "required>
+              <div class="form-row" >
+                 <label for="id">DNI/NIE</label>
+                 <input tipe="text" name="documento-id" id="id" pattern="([X-Zx-z[0-9]{7}|[0-9]{8})[A-Za-z] "required>
+              </div>
+                
 
                 <!--Campo de típo numerio-->
-                <label for="age">Edad:</label>
-                <input type="number" name="edad" id="age" min="0">
+                <div  class="form-row">
+                    <label for="age">Edad:</label>
+                    <input type="number" name="edad" id="age" min="0">
+                </div>
+           
+           
+              
+                
+                <div class="form-row botones">     
+                    <button type="submit">Registrar</button>
+                </div>
+                
             </fieldset>
-                <button type="submit">Registrar</button>
+               
+             
+          
             </form>
         </section>
 
