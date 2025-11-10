@@ -20,6 +20,8 @@
                 <li><a href="#">Guias</a></li>
                 <li><a href="registro.html">Registro</a></li>
                 <li><a href="Contactos.html">Contacto</a></li>
+                <li><a href="pages/tienda.html">Tienda</a></li>
+
             </ul>
         </nav>
               
@@ -27,7 +29,7 @@
     <main id="contenido-principal">
         <section class="tarjeta"> 
           <h2>Contacto</h2>
-            <form action="contacto.php" method="post"> 
+            <form action="contacto.php" method="post" class="form-registro"> 
                <fieldset>
                 <!--Lista desplegable-->
                 <label form="genero">Genero de juego favorito:</label>
@@ -40,41 +42,41 @@
                </select>
                 
            <p>Elige tu Plataforma</p>
-            <div>  
+            <div class="form-row">  
                     <input type="radio" name="plataforma" id="pc" value="pc">
                     <label for="pc">pc</label>
                 </div>
-            <div>
+            <div class="form-row">
                     <input type="radio" name="plataforma" id="nintendo" value="nintendo">
                     <label for="nintendo">nintendo</label>
             </div>
             
 
 
-            <div>
-            <input type="radio" name="plataforma" id="ps5" value="ps5">
-            <label for="ps5">ps5</label>
+            <div class="form-row">
+                    <input type="radio" name="plataforma" id="ps5" value="ps5">
+                    <label for="ps5">ps5</label>
             </div>
             
 
             <!--Campo de estilo checkbox-->
                <p>Plataforma</p>
-              <div>
-               <input type="checkbox" name="dificultad" id="dificultad" value="Facil">
-               <labe for="dificultad">Facil</labe >
+              <div class="form-row">
+                    <input type="checkbox" name="dificultad" id="dificultad" value="Facil">
+                    <labe for="dificultad">Facil</labe >
               </div>
-              <div>
-                <input type="checkbox" name="dificultad" id="dificultad" value="Media">
-                <labe for="dificultad">Media</labe >
+              <div class="form-row">
+                    <input type="checkbox" name="dificultad" id="dificultad" value="Media">
+                    <labe for="dificultad">Media</labe >
               </div>
-                <div>
+                <div class="form-row">
                     <input type="checkbox" name="dificultad" id="dificultad" value="DIficil">
                     <labe for="dificultad">Dificil</labe >
                 </div>
         
                 
                 <!--Checkbox sin value-->
-               <div>
+               <div class="form-row">
                 <input type="checkbox" name="suscripcion" id="suscripcion" >
                 <labe for="suscripcion">suscribete a Noticia:</labe >
                </div>
