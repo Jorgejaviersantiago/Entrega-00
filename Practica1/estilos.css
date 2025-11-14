@@ -223,7 +223,55 @@ Seccion tienda
 .card-titulo{
     color: #333;
     font-size: 0.9rem;
+    margin: 8px 0 4px;
 }
 
+.card-precio{
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.card-botton{
+    display: inline-block; 
+    padding: 10px 16px;
+    background-color: #2C3E50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+}
+/*inline-block
+por defecto los enlaces son elemtos enn linea y no haceptan padding vertical real ni border radius bien definidos
+con inline-block permitimos que se comporte como un boton real con padding bordes redondeados y ancho ajustado al texto*/
+
+/*=================================
+Practica grid
+===================================
+*/
+
+.contenedor-grid :nth-child(1){background-color: aquamarine;}
+.contenedor-grid :nth-child(2){ background-color: #e74c3c;}
+.contenedor-grid :nth-child(3){background-color: greenyellow;}
+.contenedor-grid :nth-child(4){background-color: purple;}
+.contenedor-grid :nth-child(5){background-color: goldenrod;}
+.contenedor-grid :nth-child(6){background-color: blue;}
 
 
+.contenedor-grid{
+    display: grid;   /*activar grid*/ 
+    grid-template-columns: 200px 200px 200px ;       /* Con esto hacemos tres columnas exactas*/
+    /*grid template-colums:200px 200px 200px */
+    grid-template-rows: 100px 100px  ;               /* 2 filas exactas */
+    gap: 10px;                                       /*Espacios entre filas y columnas*/
+    justify-content: center;
+    background-color: #eaeaeaea;
+    padding: 10px;
+}
+
+.itme-grid{
+    color:#000;
+    font-weight: bold;
+    border: 2px solid #60aebc;
+    font-size: 1.2rem;
+
+}
