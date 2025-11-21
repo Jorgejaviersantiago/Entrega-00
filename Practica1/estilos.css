@@ -266,7 +266,7 @@ Practica grid
    /* justify-content: center;*/
     background-color: #eaeaeaea;
     padding: 10px;
-    grid-template-columns:repeat(2,100px) ;
+    grid-template-columns:repeat(3,200px) ;
     grid-template-rows: 75px 125px  ; 
     min-height: 300px; ;
     /* Alineación de los elementros dentro de las celdas */
@@ -296,10 +296,92 @@ Practica grid
     justify-self: center;
     align-self: center;
     /*place-self:center;*/
-    order: 1;
+    order: 0;
 }
 
 .item-3{
    
-   order: -4;
+   
 }
+
+/* Seccion tienda Grid*/
+
+.lista-cards--Grid{
+display: grid;
+/*grid-template-columns: repeat(4, 1fr);*/
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+
+/*minmax(280px, 1fr)
+cada card mide como minimo 280 de ancho,
+pero puede creccer hasta ocupar una fraccion del espacio (1fr)
+-autofill
+Intenta rellenar la filoa con tantas columnas como quepan si sobran huecos,
+los resrva
+auto-fill vs auto-fit
+ auto-fill: Intenta rellenar filas con columnas, incluso reservando huecos.
+ auto fit: */
+
+
+
+
+
+
+gap: 16px;
+}
+
+/*Grid por area*/
+.contenedor-area{
+    display: grid;
+    min-height: 400px;
+    grid-template-columns: 200px 2fr 1fr;
+    grid-template-columns: 150px 2fr 1fr;
+    gap: 16px;
+    grid-template-areas: 
+    "cabecera  cabecera   cabecera"
+    "menu      principal  ads"
+    "pie      pie         pie"
+    ;
+}
+.area-header{
+    grid-area: cabecera ;background-color: #e74c3c;
+}
+.area-menu{
+    grid-area: menu ;background-color: yellowgreen;
+}
+.area-main{
+    grid-area: principal ;background-color: aquamarine;
+
+}
+.area-aside{
+    grid-area: ads ;background-color: violet;
+ 
+}
+.area-footer{
+    grid-area: pie ;background-color: tan;
+}
+
+
+
+
+
+.grid-contenedor{
+    display: grid;   
+                
+    gap: 20px;                                     
+    background-color: #eaeaeaea;
+    padding: 10px;
+    grid-template-columns:repeat(2,200px) ;
+    grid-template-rows: 100px 100px 100px 100px ; 
+    min-height: 300px; ;
+    justify-items: stretch;
+    align-items: stretch;
+    
+    justify-content: center;
+    align-content: center;
+    grid-template-areas: 
+    "cabecera  cabecera     cabecera         cabecera"
+    "menu      principal    ads               pie"
+  ;
+}  
+
