@@ -385,3 +385,53 @@ gap: 16px;
   ;
 }  
 
+.item-desigual-1{
+    grid-area: cabecera ;background-color: #e74c3c;
+}
+.item-desigual-2{
+    grid-area: menu ;background-color: yellowgreen;
+}
+.item-desigual-3{
+    grid-area: principal ;background-color: aquamarine;
+
+}
+.area-aside{
+    grid-area: ads ;background-color: violet;
+ 
+}
+.area-footer{
+    grid-area: pie ;background-color: tan;
+}
+
+
+
+
+
+
+
+
+
+.tarjeta.juegos{
+    width: (1700px, 95%);
+}
+.lista-cards--grid{
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit,minmax(240px 1fr));
+}
+.card.destacada{
+    grid-column: span 2;
+
+}
+/*@media (width < 768px){}*/
+ @media screen and (width < 768px) {
+    
+.tienda.juegos{
+    width: 95%;
+}
+/*Una sola columna de juegos */
+.lista-cards--grid{
+    grid-template-columns:minmax(220px,1fr)
+}
+ }
+
