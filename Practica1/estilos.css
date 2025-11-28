@@ -51,6 +51,14 @@ body{
     margin: 0;
     padding: 0;
 }
+/*Enlace activo del menu */
+.menu a.activo{
+color: #e74c3c;
+border-bottom: 2px solid #e74c3c;
+padding-bottom: 0 2rem;
+}
+
+
 .menu a {
     color: #fff;
     text-decoration: none;
@@ -66,7 +74,7 @@ body{
 }
 /*Zona principal (main)
   padding-> espacio intrior o relleno*/
-  #contenido-principal{
+  .contenido-principal{
     padding: 1rem;
     flex-grow: 1;                    /*Esto empuja el footer hacia abajo */
     display: flex;
@@ -80,12 +88,12 @@ body{
 -ancho maximo controlado
 */
 .tarjeta{
-    background-color: #f0f0f0;
+    background-color: #fff;
     border-radius: 12px;
     width:min(900px,95%);
     margin:1.5rem auto;
     padding:1.5rem;
-    border:1px solid #f0f0f0;
+    border:1px solid #ddd;
     box-shadow:0 2px 5px rgba(0,0,0,0.3);
 }
 /*Texto secundario*/
@@ -182,7 +190,30 @@ text-align: center;
  background:#38707e ;
   font-size: 14px;
 }
+/*=================================
+Seccion contacto
+===================================
+*/
 
+.contacto-ubicacion{
+    margin-top:  2rem;
+}
+
+.mapa-contenedor{
+    margin-top: 1rem;
+    margin: 0 auto;
+    /*esto equivale a*/
+ /*   margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;*/
+}
+.mapa-contenedor iframe{
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    /*aspec-radio 16* /9; */
+}
 
 /*=================================
 Seccion tienda
@@ -201,7 +232,7 @@ Seccion tienda
 }
 
 .card{
-    width: 280px;
+    width: 100%;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -214,18 +245,25 @@ Seccion tienda
 .card-imagen{
     width: 100px;
     height: 180px;
-    background-color: #f4f4f4;
+    background-color: #666;
     border-radius: 8px;
     margin-bottom: 8px;
     object-fit: contain ;
+    text-align: center;
+    padding: 12px;
 }
 /* textos */
 .card-titulo{
     color: #333;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     margin: 8px 0 4px;
 }
 
+.card-descripcion{
+    font-size: 0.9rem;
+    color: #666;
+    min-height: 3.5rem;
+}
 .card-precio{
     color: #e74c3c;
     font-weight: bold;
@@ -306,7 +344,7 @@ Practica grid
 
 /* Seccion tienda Grid*/
 
-.lista-cards--Grid{
+.lista-cards--grid{
 display: grid;
 /*grid-template-columns: repeat(4, 1fr);*/
 grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -321,12 +359,6 @@ los resrva
 auto-fill vs auto-fit
  auto-fill: Intenta rellenar filas con columnas, incluso reservando huecos.
  auto fit: */
-
-
-
-
-
-
 gap: 16px;
 }
 
@@ -406,8 +438,39 @@ gap: 16px;
 
 
 
+/*=================================
+Practica videos grid
+===================================
+*/
 
+.guias h1{
+    margin-top: 0;
 
+}
+
+.guias-videos{
+    margin-top: 2rem;
+
+}
+
+.guias-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:1.5rem
+} 
+/*cada guia individual */
+
+.guias-videos h3{
+    font-size: 1rem ;
+    margin-bottom: 0.5rem;
+}
+
+.guias-videos iframe{
+    width: 100%;
+    aspect-ratio:16/9;  /*Mantiene el formato panoramico*/
+    border: 0;
+    border-radius: 8px;          
+}
 
 
 
@@ -422,6 +485,13 @@ gap: 16px;
 .card.destacada{
     grid-column: span 2;
 
+
+
+
+
+
+
+
 }
 /*@media (width < 768px){}*/
  @media screen and (width < 768px) {
@@ -434,4 +504,5 @@ gap: 16px;
     grid-template-columns:minmax(220px,1fr)
 }
  }
+
 
