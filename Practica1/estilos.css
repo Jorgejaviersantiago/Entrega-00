@@ -19,13 +19,27 @@ height:100%;
 body{
 
     margin: 0;
-    font-family: Arial ,helvetica, sans-serif;
+    font-family:  "roboro", 'system-ui', 
+    'Open Sans', 'Helvetica Neue', sans-serif ;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     color:#333;
     background: #f0f0f0;
     display: flex;          /*Contenedor flexible */
     flex-direction: column;/*Disposición */
     min-height: 100vh;      /*Altura total del  */
    
+}
+
+h1, h2{
+    font-family: "Orbitron","roboto", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+h3{
+    font-family:"roboto", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 /*Cabezara crntrada y con espacio de relleno (padding)*/
 .cabecera{
@@ -197,6 +211,7 @@ Seccion contacto
 
 .contacto-ubicacion{
     margin-top:  2rem;
+    /* height: 1000px; */
 }
 
 .mapa-contenedor{
@@ -211,8 +226,12 @@ Seccion contacto
 .mapa-contenedor iframe{
     width: 100%;
     max-width: 600px;
-    height: 350px;
-    /*aspec-radio 16* /9; */
+    /*height: 350px;*/
+    aspect-ratio: 16/9;
+    border:0;
+    border-radius: 8px ;
+    display: block;
+    margin: 0 auto;  
 }
 
 /*=================================
@@ -439,7 +458,7 @@ gap: 16px;
 
 
 /*=================================
-Practica videos grid
+Practica videos grid guias
 ===================================
 */
 
@@ -472,7 +491,34 @@ Practica videos grid
     border-radius: 8px;          
 }
 
+.layout-guias .layout-guias-contenido  {
+display: flex;
+flex: 1;
+min-height: 0;
+}
 
+.layout-guias .navegacion-lateral {
+    background-color: #2C3E50;
+    padding: 1rem 0.5rem;
+    min-width: 220px; 
+
+}
+    
+.layout-guias .navegacion-lateral .menu {
+ flex-direction: column;
+
+}
+.layout-guias .navegacion-lateral .menu {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+
+/* El main se expande para ocupar el resto del espacio */
+.layout-guias #contenido-principal {
+    flex: 1;
+    padding: 1.5rem;
+}
 
 .tarjeta.juegos{
     width: (1700px, 95%);
